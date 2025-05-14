@@ -797,9 +797,99 @@
 
             </div>
 
-            <!-- -------------------------------------- -->
+			<!-- -------------------------------------- -->
 
             <div class="mt-3"><label id="" for="">
+			    <strong>Existe alguma nulidade / vício processual que enseje o retorno do processo para fases anteriores:</strong>
+	        </label></div>
+			
+			<div id="div_nulidade_vicio_processual_retorno_fases_anteriores">
+                <input type="checkbox" id="input_nulidade_vicio_processual_retorno_fases_anteriores_sim">
+                <label for="input_nulidade_vicio_processual_retorno_fases_anteriores_sim" id="lab_nulidade_vicio_processual_retorno_fases_anteriores_sim">Sim</label>
+
+                <input type="checkbox" class="ml-2" id="input_nulidade_vicio_processual_retorno_fases_anteriores_nao">
+                <label for="input_nulidade_vicio_processual_nao" id="lab_nulidade_vicio_processual_retorno_fases_anteriores_nao">Não</label>
+            </div>
+			
+			<div class="" style="display: none;" id="divSim_nulidade_vicio_processual_retorno_fases_anteriores">
+                <div class="border rounded px-2 py-3 ">
+                    <span id="span_nulidade_vicio_processual_retorno_fases_anteriores_checked_1">O processo tem a seguinte nulidade / vício:</span>
+
+                    <br>
+
+                    <!-- TODO: ids -->
+					<label><input type="checkbox"> I - ausência de comunicação dos atos à pessoa física ou jurídica autuada;</label></br>
+					<label><input type="checkbox"> II - ilegitimidade de parte;</label><br>
+					<label><input type="checkbox"> III - falta de correspondência entre os fatos descritos no auto de infração e os dispositivos legais nele capitulados;</label><br>
+					<label><input type="checkbox"> IV - ausência ou inadequação de fundamentação legal da decisão por quaisquer das instâncias julgadoras que resulte em penalidade à pessoa física ou jurídica autuada;</label><br>
+					<label><input type="checkbox"> V - impedimento ou suspeição de membro de quaisquer das instâncias julgadoras, participante da instrução ou do julgamento do processo, na forma do art. 68; ou</label><br>
+					<label><input type="checkbox"> VI - descumprimento de qualquer das demais formalidades previstas em lei.</label><br>
+					
+					<textarea class="form-control my-1" cols="30" rows="5" placeholder="P. ex. houve ausência de comunicação da notificação pois esta não foi encaminhada para endereço correto do interessado."></textarea>
+                </div>
+            </div>
+			
+			<hr>
+			
+			<!-- -------------------------------------- -->
+			
+			<div class="mt-3"><label id="" for="">
+			    <strong>Existe alguma nulidade / vício processual que enseje a extinção do processo sem aplicação de multa:</strong>
+	        </label></div>
+			
+			<div id="div_nulidade_vicio_processual_extincao_sem_multa">
+                <input type="checkbox" id="input_nulidade_vicio_processual_extincao_sem_multa_sim">
+                <label for="input_nulidade_vicio_processual_extincao_sem_multa_sim" id="lab_nulidade_vicio_processual_extincao_sem_multa_sim">Sim</label>
+
+                <input type="checkbox" class="ml-2" id="input_nulidade_vicio_processual_extincao_sem_multa_nao">
+                <label for="input_nulidade_vicio_processual_extincao_sem_multa_nao" id="lab_nulidade_vicio_processual_extincao_sem_multa_nao">Não</label>
+            </div>
+			
+			<div class="" style="display: none;" id="divSim_nulidade_vicio_processual_extincao_sem_multa">
+                <div class="border rounded px-2 py-3 ">
+                    <span id="span_nulidade_vicio_processual_checked_1">O processo tem a seguinte nulidade / vício:</span>
+
+                    <br>
+
+                    <!-- TODO: ids -->
+					<label><input type="checkbox"> I - ausência de comunicação dos atos à pessoa física ou jurídica autuada;</label></br>
+					<label><input type="checkbox"> II - ilegitimidade de parte;</label><br>
+					<label><input type="checkbox"> III - falta de correspondência entre os fatos descritos no auto de infração e os dispositivos legais nele capitulados;</label><br>
+					<label><input type="checkbox"> IV - ausência ou inadequação de fundamentação legal da decisão por quaisquer das instâncias julgadoras que resulte em penalidade à pessoa física ou jurídica autuada;</label><br>
+					<label><input type="checkbox"> V - impedimento ou suspeição de membro de quaisquer das instâncias julgadoras, participante da instrução ou do julgamento do processo, na forma do art. 68; ou</label><br>
+					<label><input type="checkbox"> VI - descumprimento de qualquer das demais formalidades previstas em lei.</label><br>
+					
+					<textarea class="form-control my-1" cols="30" rows="5" placeholder="P. ex. houve ausência de comunicação da notificação pois esta não foi encaminhada para endereço correto do interessado."></textarea>
+                </div>
+            </div>
+			
+			<hr>
+			
+			<!-- -------------------------------------- -->
+			
+			<div class="mt-3"><label id="" for="">
+			    <strong>Deferir defesa:</strong>
+	        </label></div>
+			
+			<div id="div_deferir_defesa">
+                <input type="checkbox" id="input_deferir_defesa_sim">
+                <label for="input_deferir_defesa_sim" id="lab_deferir_defesa_sim">Sim</label>
+
+                <input type="checkbox" class="ml-2" id="input_deferir_defesa_nao">
+                <label for="input_deferir_defesa_nao" id="lab_deferir_defesa_nao">Não</label>
+            </div>
+			
+			<div class="" style="display: none;" id="divSim_deferir_defesa">
+                <div class="border rounded px-2 py-3 ">
+                    <textarea class="form-control my-1" cols="30" rows="5" placeholder="Resumir as alegações da defesa, incluindo os documentos apresentados, e colocar item por item os motivos pelos quais se votará ao final pela extinção e arquivamento."></textarea>
+                </div>
+            </div>
+			
+			<hr>
+			
+			<!-- -------------------------------------- -->
+			
+			            <div class="mt-3"><label id="" for="">
 			    <strong>Informações sobre a regularização e o pagamento de multa:</strong>
 	        </label></div>
 
@@ -903,96 +993,6 @@
             <div></div>
 
             <hr>
-			
-			<!-- -------------------------------------- -->
-
-            <div class="mt-3"><label id="" for="">
-			    <strong>Existe alguma nulidade / vício processual que enseje o retorno do processo para fases anteriores:</strong>
-	        </label></div>
-			
-			<div id="div_nulidade_vicio_processual_retorno_fases_anteriores">
-                <input type="checkbox" id="input_nulidade_vicio_processual_retorno_fases_anteriores_sim">
-                <label for="input_nulidade_vicio_processual_retorno_fases_anteriores_sim" id="lab_nulidade_vicio_processual_retorno_fases_anteriores_sim">Sim</label>
-
-                <input type="checkbox" class="ml-2" id="input_nulidade_vicio_processual_retorno_fases_anteriores_nao">
-                <label for="input_nulidade_vicio_processual_nao" id="lab_nulidade_vicio_processual_retorno_fases_anteriores_nao">Não</label>
-            </div>
-			
-			<div class="" style="display: none;" id="divSim_nulidade_vicio_processual_retorno_fases_anteriores">
-                <div class="border rounded px-2 py-3 ">
-                    <span id="span_nulidade_vicio_processual_retorno_fases_anteriores_checked_1">O processo tem a seguinte nulidade / vício:</span>
-
-                    <br>
-
-                    <!-- TODO: ids -->
-					<label><input type="checkbox"> I - ausência de comunicação dos atos à pessoa física ou jurídica autuada;</label></br>
-					<label><input type="checkbox"> II - ilegitimidade de parte;</label><br>
-					<label><input type="checkbox"> III - falta de correspondência entre os fatos descritos no auto de infração e os dispositivos legais nele capitulados;</label><br>
-					<label><input type="checkbox"> IV - ausência ou inadequação de fundamentação legal da decisão por quaisquer das instâncias julgadoras que resulte em penalidade à pessoa física ou jurídica autuada;</label><br>
-					<label><input type="checkbox"> V - impedimento ou suspeição de membro de quaisquer das instâncias julgadoras, participante da instrução ou do julgamento do processo, na forma do art. 68; ou</label><br>
-					<label><input type="checkbox"> VI - descumprimento de qualquer das demais formalidades previstas em lei.</label><br>
-					
-					<textarea class="form-control my-1" cols="30" rows="5" placeholder="P. ex. houve ausência de comunicação da notificação pois esta não foi encaminhada para endereço correto do interessado."></textarea>
-                </div>
-            </div>
-			
-			<hr>
-			
-			<!-- -------------------------------------- -->
-			
-			<div class="mt-3"><label id="" for="">
-			    <strong>Existe alguma nulidade / vício processual que enseje a extinção do processo sem aplicação de multa:</strong>
-	        </label></div>
-			
-			<div id="div_nulidade_vicio_processual_extincao_sem_multa">
-                <input type="checkbox" id="input_nulidade_vicio_processual_extincao_sem_multa_sim">
-                <label for="input_nulidade_vicio_processual_extincao_sem_multa_sim" id="lab_nulidade_vicio_processual_extincao_sem_multa_sim">Sim</label>
-
-                <input type="checkbox" class="ml-2" id="input_nulidade_vicio_processual_extincao_sem_multa_nao">
-                <label for="input_nulidade_vicio_processual_extincao_sem_multa_nao" id="lab_nulidade_vicio_processual_extincao_sem_multa_nao">Não</label>
-            </div>
-			
-			<div class="" style="display: none;" id="divSim_nulidade_vicio_processual_extincao_sem_multa">
-                <div class="border rounded px-2 py-3 ">
-                    <span id="span_nulidade_vicio_processual_checked_1">O processo tem a seguinte nulidade / vício:</span>
-
-                    <br>
-
-                    <!-- TODO: ids -->
-					<label><input type="checkbox"> I - ausência de comunicação dos atos à pessoa física ou jurídica autuada;</label></br>
-					<label><input type="checkbox"> II - ilegitimidade de parte;</label><br>
-					<label><input type="checkbox"> III - falta de correspondência entre os fatos descritos no auto de infração e os dispositivos legais nele capitulados;</label><br>
-					<label><input type="checkbox"> IV - ausência ou inadequação de fundamentação legal da decisão por quaisquer das instâncias julgadoras que resulte em penalidade à pessoa física ou jurídica autuada;</label><br>
-					<label><input type="checkbox"> V - impedimento ou suspeição de membro de quaisquer das instâncias julgadoras, participante da instrução ou do julgamento do processo, na forma do art. 68; ou</label><br>
-					<label><input type="checkbox"> VI - descumprimento de qualquer das demais formalidades previstas em lei.</label><br>
-					
-					<textarea class="form-control my-1" cols="30" rows="5" placeholder="P. ex. houve ausência de comunicação da notificação pois esta não foi encaminhada para endereço correto do interessado."></textarea>
-                </div>
-            </div>
-			
-			<hr>
-			
-			<!-- -------------------------------------- -->
-			
-			<div class="mt-3"><label id="" for="">
-			    <strong>Deferir defesa:</strong>
-	        </label></div>
-			
-			<div id="div_deferir_defesa">
-                <input type="checkbox" id="input_deferir_defesa_sim">
-                <label for="input_deferir_defesa_sim" id="lab_deferir_defesa_sim">Sim</label>
-
-                <input type="checkbox" class="ml-2" id="input_deferir_defesa_nao">
-                <label for="input_deferir_defesa_nao" id="lab_deferir_defesa_nao">Não</label>
-            </div>
-			
-			<div class="" style="display: none;" id="divSim_deferir_defesa">
-                <div class="border rounded px-2 py-3 ">
-                    <textarea class="form-control my-1" cols="30" rows="5" placeholder="Resumir as alegações da defesa, incluindo os documentos apresentados, e colocar item por item os motivos pelos quais se votará ao final pela extinção e arquivamento."></textarea>
-                </div>
-            </div>
-			
-			<hr>
 			
             <!-- div resolução -->
 
