@@ -1899,7 +1899,7 @@
 
             <label class="mb-3" for="" id="lab_razoes_decisao"><strong>Razões da Decisão</strong></label>
             <textarea class="form-control my-1" id="area_razoes_decisao" cols="30" rows="5"
-                style="width: 100%; padding: 5px;" placeholder="Texto a ser preenchido pelo relator.">Opino, portanto, pela nulidade dos atos processuais, bem como pelo retorno dos autos à instância competente, a Agente de Fiscalização do CAU/RS, para repetição e retificação de ato processual, a saber (inserir para qual fase o processo retornará  - a lavratura de nova notificação / a comunicação da notificação / a lavratura de novo auto de infração / a comunicação do auto de infração).</textarea>
+                style="width: 100%; padding: 5px;" placeholder="Texto a ser preenchido pelo relator."></textarea>
 
             <!-- <p style="font-style: italic;">(Exemplo de preenchimento: Diante do exposto acima, é evidente a infração ao
                 exercício profissional cometido pela empresa interessada, estando ela ainda irregular/tendo ela
@@ -2549,7 +2549,13 @@
 			}
 		}
 
-
+		function atualizarRazoesDecisao() {
+			areaRazoesDecisao.value = '';
+		
+			if (checkboxSim_nulidade_vicio_processual_retorno_fases_anteriores.checked) {
+				areaRazoesDecisao.value = 'Opino, portanto, pela nulidade dos atos processuais, bem como pelo retorno dos autos à instância competente, a Agente de Fiscalização do CAU/RS, para repetição e retificação de ato processual, a saber (inserir para qual fase o processo retornará  - a lavratura de nova notificação / a comunicação da notificação / a lavratura de novo auto de infração / a comunicação do auto de infração).';
+			}
+		}
 
         // ----------------------------------------------------------------------------------------------
 
@@ -2712,6 +2718,7 @@
             }
 
 			exibirConsiderando();
+			atualizarRazoesDecisao();
         });
 
 		checkboxNao_nulidade_vicio_processual_retorno_fases_anteriores.addEventListener('change', function () {
@@ -2721,6 +2728,7 @@
             }
 
 			exibirConsiderando();
+			atualizarRazoesDecisao();
         });
 
 		// Nulidades e vícios processuais que ensejem extinção do processo sem aplicação de multa
@@ -2751,6 +2759,7 @@
             }
 
 			exibirConsiderando();
+			atualizarRazoesDecisao();
         });
 
 		checkboxNao_nulidade_vicio_processual_extincao_sem_multa.addEventListener('change', function () {
@@ -2760,6 +2769,7 @@
             }
 
 			exibirConsiderando();
+			atualizarRazoesDecisao();
         });
 
         // Houve contestação da Notificação Preventiva?
@@ -2800,6 +2810,7 @@
             }
 
 			exibirConsiderando();
+			atualizarRazoesDecisao();
         });
 		
 		checkboxNao_deferir_defesa.addEventListener('change', function () {
@@ -2809,6 +2820,7 @@
 			}
 
 			exibirConsiderando();
+			atualizarRazoesDecisao();
 		});
 
         // Houve tentativa de regularização?
@@ -3031,8 +3043,7 @@
                 divNao_AlteracaoMulta.style.display = 'none';
             }
         });
-
-
+		
         // ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
         // procedimento para automatizar o campo das Razões da Decisão 
@@ -3063,9 +3074,9 @@
         }
 
         // Adiciona os eventos de mudança para os checkboxes
-        razoesSemRegularizacao.addEventListener('change', atualizarAreaDecisao);
-        razoesSomenteRegularizacao.addEventListener('change', atualizarAreaDecisao);
-        razoesSomentePagamentoMulta.addEventListener('change', atualizarAreaDecisao);
+        //razoesSemRegularizacao.addEventListener('change', atualizarAreaDecisao);
+        //razoesSomenteRegularizacao.addEventListener('change', atualizarAreaDecisao);
+        //razoesSomentePagamentoMulta.addEventListener('change', atualizarAreaDecisao);
 
         // ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
