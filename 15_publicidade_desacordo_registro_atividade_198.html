@@ -2655,19 +2655,19 @@
             }
 
         });
-		
+
 		// regularização e pagamento de multa
 		let input_regularizacao_e_pagamento_multa = document.getElementById("input_regularizacao_e_pagamento_multa");
 		let div_regularizacao_e_pagamento_multa_checked = document.getElementById("div_regularizacao_e_pagamento_multa_checked");
 		let div_regularizacao_e_pagamento_multa_checked_resolucoes = document.getElementById("div_regularizacao_e_pagamento_multa_checked_resolucoes");
-		
+
 		input_regularizacao_e_pagamento_multa.addEventListener("change", () => {
             if (input_regularizacao_e_pagamento_multa.checked) {
                 div_regularizacao_e_pagamento_multa_checked.style.display = "block";
                 div_regularizacao_e_pagamento_multa_checked_resolucoes.style.display = "block";
                 //div_multa_paga_voto.style.display = "block";
                 //div_somente_pagamento_multa_checked_voto.style.display = "none"; //inversamente
-				
+
 				//Desmarcar as demais checkboxes
 				document.getElementById("input_sem_regularizacao_sem_pagamento").checked = false;
 				document.getElementById("input_sem_regularizacao_sem_pagamento").dispatchEvent(new Event("change"));
@@ -2681,69 +2681,84 @@
                 //div_multa_paga_voto.style.display = "none";
                 //div_somente_pagamento_multa_checked_voto.style.display = "block"; //inversamente
             }
-
         });
-		
-	
+
+
 		// Nulidades e vícios processuais que ensejem retorno para fases anteriores
-				
+
 		// Obtém os elementos de checkbox
         let checkboxSim_nulidade_vicio_processual_retorno_fases_anteriores = document.getElementById('input_nulidade_vicio_processual_retorno_fases_anteriores_sim');
         let checkboxNao_nulidade_vicio_processual_retorno_fases_anteriores = document.getElementById('input_nulidade_vicio_processual_retorno_fases_anteriores_nao');
-				
+
         // Obtém a div correspondente
         let divSim_nulidade_vicio_processual_retorno_fases_anteriores = document.getElementById('divSim_nulidade_vicio_processual_retorno_fases_anteriores');
-		
+
 	    // Adiciona os event listeners
         checkboxSim_nulidade_vicio_processual_retorno_fases_anteriores.addEventListener('change', function () {
 	        if (checkboxSim_nulidade_vicio_processual_retorno_fases_anteriores.checked) {
 	            checkboxNao_nulidade_vicio_processual_retorno_fases_anteriores.checked = false; // Desmarca o outro checkbox
-                divSim_nulidade_vicio_processual_retorno_fases_anteriores.style.display = 'block';
                 //divNao_nulidade_vicio_processual_retorno_fases_anteriores.style.display = 'none';
+
+				checkboxSim_nulidade_vicio_processual_extincao_sem_multa.checked = false;
+				checkboxNao_nulidade_vicio_processual_extincao_sem_multa.checked = true;
+				checkboxSim_deferir_defesa.checked = false;
+				checkboxNao_deferir_defesa.checked = true;
+
+				divSim_nulidade_vicio_processual_retorno_fases_anteriores.style.display = 'block';
+				divSim_nulidade_vicio_processual_extincao_sem_multa.style.display = 'none';
+				divSim_deferir_defesa.style.display = 'none';
             } else {
                 divSim_nulidade_vicio_processual_retorno_fases_anteriores.style.display = 'none';
             }
-			
+
 			exibirConsiderando();
         });
-		
+
 		checkboxNao_nulidade_vicio_processual_retorno_fases_anteriores.addEventListener('change', function () {
 	        if (checkboxNao_nulidade_vicio_processual_retorno_fases_anteriores.checked) {
 	            checkboxSim_nulidade_vicio_processual_retorno_fases_anteriores.checked = false; // Desmarca o outro checkbox
                 divSim_nulidade_vicio_processual_retorno_fases_anteriores.style.display = 'none';
             }
-			
+
 			exibirConsiderando();
         });
-		
+
 		// Nulidades e vícios processuais que ensejem extinção do processo sem aplicação de multa
-		
+
 		// Obtém os elementos de checkbox
         let checkboxSim_nulidade_vicio_processual_extincao_sem_multa = document.getElementById('input_nulidade_vicio_processual_extincao_sem_multa_sim');
         let checkboxNao_nulidade_vicio_processual_extincao_sem_multa = document.getElementById('input_nulidade_vicio_processual_extincao_sem_multa_nao');
-				
+
         // Obtém a div correspondente
         let divSim_nulidade_vicio_processual_extincao_sem_multa = document.getElementById('divSim_nulidade_vicio_processual_extincao_sem_multa');
-		
+
 	    // Adiciona os event listeners
         checkboxSim_nulidade_vicio_processual_extincao_sem_multa.addEventListener('change', function () {
 	        if (checkboxSim_nulidade_vicio_processual_extincao_sem_multa.checked) {
 	            checkboxNao_nulidade_vicio_processual_extincao_sem_multa.checked = false; // Desmarca o outro checkbox
-                divSim_nulidade_vicio_processual_extincao_sem_multa.style.display = 'block';
                 //divNao_nulidade_vicio_processual.style.display = 'none';
+
+				checkboxSim_nulidade_vicio_processual_retorno_fases_anteriores.checked = false;
+				checkboxNao_nulidade_vicio_processual_retorno_fases_anteriores.checked = true;
+				checkboxSim_deferir_defesa.checked = false;
+				checkboxNao_deferir_defesa.checked = true;
+
+				divSim_nulidade_vicio_processual_retorno_fases_anteriores.style.display = 'none';
+				divSim_nulidade_vicio_processual_extincao_sem_multa.style.display = 'block';
+				divSim_deferir_defesa.style.display = 'none';
             } else {
                 divSim_nulidade_vicio_processual_extincao_sem_multa.style.display = 'none';
             }
-			
+
 			exibirConsiderando();
         });
-		
+
 		checkboxNao_nulidade_vicio_processual_extincao_sem_multa.addEventListener('change', function () {
 	        if (checkboxNao_nulidade_vicio_processual_extincao_sem_multa.checked) {
 	            checkboxSim_nulidade_vicio_processual_extincao_sem_multa.checked = false; // Desmarca o outro checkbox
                 divSim_nulidade_vicio_processual_extincao_sem_multa.style.display = 'none';
             }
-			
+
 			exibirConsiderando();
         });
 
@@ -2770,12 +2785,20 @@
         checkboxSim_deferir_defesa.addEventListener('change', function () {
 	        if (checkboxSim_deferir_defesa.checked) {
 	            checkboxNao_deferir_defesa.checked = false; // Desmarca o outro checkbox
-                divSim_deferir_defesa.style.display = 'block';
                 //divNao_nulidade_vicio_processual.style.display = 'none';
+
+				checkboxSim_nulidade_vicio_processual_retorno_fases_anteriores.checked = false;
+				checkboxNao_nulidade_vicio_processual_retorno_fases_anteriores.checked = true;
+				checkboxSim_nulidade_vicio_processual_extincao_sem_multa.checked = false;
+				checkboxNao_nulidade_vicio_processual_extincao_sem_multa.checked = true;
+
+				divSim_nulidade_vicio_processual_retorno_fases_anteriores.style.display = 'none';
+				divSim_nulidade_vicio_processual_extincao_sem_multa.style.display = 'none';
+				divSim_deferir_defesa.style.display = 'block';
             } else {
                 divSim_deferir_defesa.style.display = 'none';
             }
-			
+
 			exibirConsiderando();
         });
 		
@@ -2784,7 +2807,7 @@
 				checkboxSim_deferir_defesa.checked = false; // Desmarca o outro checkbox
 				divSim_deferir_defesa.style.display = 'none';
 			}
-			
+
 			exibirConsiderando();
 		});
 
