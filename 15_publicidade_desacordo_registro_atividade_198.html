@@ -2556,6 +2556,33 @@
 				areaRazoesDecisao.value = 'Opino, portanto, pela nulidade dos atos processuais, bem como pelo retorno dos autos à instância competente, a Agente de Fiscalização do CAU/RS, para repetição e retificação de ato processual, a saber (inserir para qual fase o processo retornará  - a lavratura de nova notificação / a comunicação da notificação / a lavratura de novo auto de infração / a comunicação do auto de infração).';
 			}
 		}
+		
+		function atualizarAlteracaoMulta() {
+            divSim_AlteracaoMulta.style.display = 'none';
+			divNao_AlteracaoMulta.style.display = 'none';
+				
+			if (checkboxSim_AlteracaoMulta.checked) {
+                divSim_AlteracaoMulta.style.display = 'block';
+            }
+		
+			if (checkboxNao_AlteracaoMulta.checked) {
+				let exibir = true;
+				
+				if (!checkboxNao_nulidade_vicio_processual_retorno_fases_anteriores.checked) {
+					exibir = false;
+				}
+				if (!checkboxNao_nulidade_vicio_processual_extincao_sem_multa.checked) {
+					exibir = false;
+				}
+				if (!checkboxNao_deferir_defesa.checked) {
+					exibir = false;
+				}
+			
+				if (exibir) {
+					divNao_AlteracaoMulta.style.display = 'block';
+				}
+            }
+		}
 
         // ----------------------------------------------------------------------------------------------
 
@@ -2719,6 +2746,7 @@
 
 			exibirConsiderando();
 			atualizarRazoesDecisao();
+			atualizarAlteracaoMulta();
         });
 
 		checkboxNao_nulidade_vicio_processual_retorno_fases_anteriores.addEventListener('change', function () {
@@ -2729,6 +2757,7 @@
 
 			exibirConsiderando();
 			atualizarRazoesDecisao();
+			atualizarAlteracaoMulta();
         });
 
 		// Nulidades e vícios processuais que ensejem extinção do processo sem aplicação de multa
@@ -2760,6 +2789,7 @@
 
 			exibirConsiderando();
 			atualizarRazoesDecisao();
+			atualizarAlteracaoMulta();
         });
 
 		checkboxNao_nulidade_vicio_processual_extincao_sem_multa.addEventListener('change', function () {
@@ -2770,6 +2800,7 @@
 
 			exibirConsiderando();
 			atualizarRazoesDecisao();
+			atualizarAlteracaoMulta();
         });
 
         // Houve contestação da Notificação Preventiva?
@@ -2811,6 +2842,7 @@
 
 			exibirConsiderando();
 			atualizarRazoesDecisao();
+			atualizarAlteracaoMulta();
         });
 		
 		checkboxNao_deferir_defesa.addEventListener('change', function () {
@@ -2821,6 +2853,7 @@
 
 			exibirConsiderando();
 			atualizarRazoesDecisao();
+			atualizarAlteracaoMulta();
 		});
 
         // Houve tentativa de regularização?
@@ -3027,21 +3060,17 @@
         checkboxSim_AlteracaoMulta.addEventListener('change', function () {
             if (checkboxSim_AlteracaoMulta.checked) {
                 checkboxNao_AlteracaoMulta.checked = false; // Desmarca o outro checkbox
-                divSim_AlteracaoMulta.style.display = 'block';
-                divNao_AlteracaoMulta.style.display = 'none';
-            } else {
-                divSim_AlteracaoMulta.style.display = 'none';
             }
+			
+			atualizarAlteracaoMulta();
         });
 
         checkboxNao_AlteracaoMulta.addEventListener('change', function () {
             if (checkboxNao_AlteracaoMulta.checked) {
                 checkboxSim_AlteracaoMulta.checked = false; // Desmarca o outro checkbox
-                divNao_AlteracaoMulta.style.display = 'block';
-                divSim_AlteracaoMulta.style.display = 'none';
-            } else {
-                divNao_AlteracaoMulta.style.display = 'none';
             }
+			
+			atualizarAlteracaoMulta();
         });
 		
         // ---------------------------------------------------------------------------------------------------------------------------------------------------------
