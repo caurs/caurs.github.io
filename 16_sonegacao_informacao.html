@@ -1357,7 +1357,7 @@
                                                     <td class="text-center align-middle">10</td>
                                                     <td class="text-center">
                                                         <input type="checkbox" class="form-check-input text-center"
-                                                            id="gravidade-item8" data-text=""disabled>
+                                                            id="gravidade-item8" data-text="">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -1390,7 +1390,7 @@
                                                     <td class="text-center align-middle">1</td>
                                                     <td class="text-center">
                                                         <input type="checkbox" class="form-check-input text-center"
-                                                            id="gravidade-item11" data-text="">
+                                                            id="gravidade-item11" data-text=""disabled>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -4461,13 +4461,13 @@
         // selecionar o checkbox referente à infração logo no início
         // Adiciona um event listener ao botão com ID 'btn_calculadora'
         document.getElementById('btn_calculadora').addEventListener('click', function() {
-            let checkbox = document.getElementById("gravidade-item11");
+            let checkbox = document.getElementById("gravidade-item8");
 
             if (!checkbox.checked) {
                 checkbox.click(); // Simula o clique no checkbox
-                console.log("Checkbox gravidade-item11 clicado");
+                console.log("Checkbox gravidade-item8 clicado");
             } else {
-                console.log("Checkbox gravidade-item11 não encontrado");
+                console.log("Checkbox gravidade-item8 não encontrado");
             }
         });
 
