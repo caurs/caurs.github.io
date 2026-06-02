@@ -4741,6 +4741,10 @@
                     // Atualizar o texto no elemento span_corresp_alteracao_multa_sim_2
                     let span_corresp_alteracao_multa_sim_2 = document.getElementById("span_corresp_alteracao_multa_sim_2");
                     span_corresp_alteracao_multa_sim_2.innerText = 'R$ ' + multaAplicada.toFixed(2).replace('.', ',') + '.';
+					
+					// Atualizar o texto no elemento span_alteracao_multa_nao_2
+                    let span_alteracao_multa_nao_2 = document.getElementById("span_alteracao_multa_nao_2");
+                    span_alteracao_multa_nao_2.innerText = 'R$ ' + multaAplicada.toFixed(2).replace('.', ',') + '.';
                 } else {
                     document.getElementById('multa_aplicada').textContent = '';
                 }
