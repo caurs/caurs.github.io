@@ -3916,11 +3916,12 @@
 
 
                 if (input_alteracao_multa_nao.checked) {
-                    let span_alteracao_multa_nao = document.getElementById("span_alteracao_multa_nao");
+                    let span_alteracao_multa_nao_1 = document.getElementById("span_alteracao_multa_nao_1");
+					let span_alteracao_multa_nao_2 = document.getElementById("span_alteracao_multa_nao_2");
 
                     let span_alteracao_multa_nao_final = document.getElementById("span_alteracao_multa_nao_final");
 
-                    span_alteracao_multa_nao_final.innerText = span_alteracao_multa_nao.innerText;
+                    span_alteracao_multa_nao_final.innerText = span_alteracao_multa_nao_1.innerText + ' ' + span_alteracao_multa_nao_2.innerText;
 
 
                 } else {
